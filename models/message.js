@@ -1,4 +1,5 @@
 var Msg = require('./Msg.js');
+var mongodb = require('./mongodb');
 
 exports.Add = function(req,res){
 		console.log(req.body);
@@ -15,8 +16,9 @@ exports.Add = function(req,res){
 
 exports.messageJSON = function(req,res)
 {
-	Message.find({},function(err,obj){
-		res.send(obj);
-	});
-	console.log(res.body);
+	var context = Msg.findByName();
+	
+	console.log(context);
+
+	res.render('home',context);
 };

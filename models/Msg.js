@@ -12,15 +12,18 @@ var Message = mongodb.mongoose.model('Message', MessageSchema);
 var MessageDAO = function(){};
 
 MessageDAO.prototype.save = function(obj,callback) {
-	var msg = new Message(obj);
+	var msg = new Message(obj);  
 	msg.save(function(err){
 		callback(err);
 	});
 };
 
-MessageDAO.prototype.findByName = function(name, callback){
-	Message.find({}, function(err,obj){
-		callback(err,obj);
+MessageDAO.prototype.findByName = function(){
+	Message.find(function(err,msg){
+		return {
+			name: msg.name,
+			message: msg.message,
+		};
 	});
 };
 

@@ -9,7 +9,7 @@ var handlebars = require('express3-handlebars')
 	app.engine('handlebars', handlebars.engine);
 	app.set('view engine', 'handlebars');
 
-app.set('port',process.env.PORT||3000);
+app.set('port',process.env.PORT||3001);
 
 /*app.use(function(req,res,next){
 		res.locals.showTests=app.get('env')!=='production'&&req.query.test==='1';
@@ -20,12 +20,10 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(require('body-parser')());
 
-app.get('/',function(req,res){
-	res.render('home');
-});
+app.get('/',message.messageJSON);
 
 app.post('/models/message',message.Add);//增加留言
-app.get('/models/message',message.messageJSON);//取出留言
+
 
 app.get('/about',function(req,res){
 	res.render('about',{
