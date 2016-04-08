@@ -1,0 +1,191 @@
+body
+{
+	margin: 0;
+	background: black;
+	padding: 18px;
+}
+.container
+{
+	position: relative;
+}
+
+.aimg
+{
+	
+	overflow: hidden;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	margin-bottom: 0;
+}
+
+textarea
+{
+	resize: none;
+}
+.preview
+{
+	-webkit-transform: rotateY(180deg);
+}
+
+.aimg img
+{
+	display: block;
+	
+	width: 100%;
+}
+
+.atext
+{
+	text-align: center;
+	display: block;
+	margin-top: 0;
+	padding-bottom: 100px;
+	background: white;
+	overflow: auto;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding: 0 0 0 0;
+}
+
+.atextp
+{
+	display: block;
+	padding-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	font-size: 50px;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1458122004_4168832.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1458122004_4168832.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1458122004_4168832.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1458122004_4168832.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1458122004_4168832.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+                    
+                    
+                    
+.iconfont
+{
+	color: white;
+	font-family:"iconfont";
+	font-size:18px;
+	font-style:normal;
+}
+
+.bicon
+{
+	line-height: 700px;
+	height: 700px;
+	text-align: center;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	background-color: gray;
+	
+}
+.bicon .iconfont
+{
+	font-size: 160px;
+}
+.atexta
+{
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: 30px;
+	height: 400px;
+	border: none;
+}
+.atexta:focus
+{
+	outline: none;
+}
+
+.bicon:active
+{
+	background-color: 
+}
+.send .iconfont
+{
+	color: white;
+	font-size: 107px;
+}
+.send
+{
+	line-height: 180px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #00FFFF;
+	width: 180px;
+	height: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	border-style: none;
+	
+	box-shadow: 3px 3px 9px rgba(0,0,0,.2);
+}
+
+.atexti 
+{
+	
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.atexti .iconfont
+{
+	color: gray;
+	font-size: 83px;
+	
+}
+.atexti p
+{
+	font-size: 30px;
+
+
+}
+.at 
+
+{
+	display: inline-block;
+	
+}
+
+.at1
+{
+	margin-left: 176px;
+}
+
+.like .iconfont
+{
+	color:#FF3333;
+	font-size: 83px;
+}
+
+.like
+{
+	float: right;
+	margin-right: 32px;
+	margin-top: 23px;
+}
+
+.trans
+{
+	-webkit-transition:transform 5s ease;
+	-webkit-transform: rotateY(360deg);
+	
+}
+
+.hide
+{
+	display: none;
+}
+
+.show
+{
+	display: block;
+}
