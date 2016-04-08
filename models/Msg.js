@@ -4,7 +4,12 @@ var Schema=mongodb.mongoose.Schema;
 
 var MessageSchema = new Schema({
 	message: String,
-	name: String
+	name: String,
+	vMon: Number,
+	vDay: Number,
+	h: Number,
+	m: Number,
+	city: String
 });
 
 var Message = mongodb.mongoose.model('Message', MessageSchema); 
@@ -18,13 +23,8 @@ MessageDAO.prototype.save = function(obj,callback) {
 	});
 };
 
-MessageDAO.prototype.findByName = function(){
-	Message.find(function(err,msg){
-		return {
-			name: msg.name,
-			message: msg.message,
-		};
-	});
+MessageDAO.prototype.findall = function(callback){
+	return Message.find({}).sort({'_id': -1}).exec(callback);
 };
 
 module.exports = new MessageDAO;

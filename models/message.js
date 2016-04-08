@@ -16,9 +16,13 @@ exports.Add = function(req,res){
 
 exports.messageJSON = function(req,res)
 {
-	var context = Msg.findByName();
 	
-	console.log(context);
 
-	res.render('home',context);
+	Msg.findall(function(err,obj){
+		console.log(obj);
+		res.render('home',{
+			obj: obj
+		});
+	});
+
 };

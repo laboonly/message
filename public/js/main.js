@@ -1,10 +1,10 @@
 $(document).ready(function(){
 	$(".preview").addClass("trans");
-
+var locations
 	$.getJSON("http://api.vgee.cn/mylocation",function(json){
 		var loca=json.data;
-		var locations=loca.location;
-		$(".loca").after('<p>'+locations.city+'</p>');
+		locations=loca.location;
+		
 	})
 
 	var d=new Date();
@@ -17,8 +17,12 @@ $(document).ready(function(){
 	if (m<10) {
 		m='0'+m;
 	};
-	$(".time").after('<p>'+vMon+'/'+vDay+'&nbsp&nbsp'+h+':'+m+'</p>');
-
+	
+	$('.sen').click(function(){
+		$('.preview').addClass("hide");
+		$('.edit').removeClass("hide");
+		$('.sen').addClass("hide");
+	});
 
 	$('.send').click(function(){
 		$.ajax({
@@ -27,7 +31,12 @@ $(document).ready(function(){
 			contentType: "application/Json",
 			data: JSON.stringify({ 
 				message : $("#message").val(),
-				name: "ly"
+				name: "ly",
+				vMon: vMon,
+				vDay: vDay,
+				h: h,
+				m: m,
+				city: locations.city
 			 }),
 			success: function(data,textAtatus){
 			console.log(data.Message);

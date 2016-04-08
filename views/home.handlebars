@@ -1,3 +1,4 @@
+{{#obj}}
 <div class="container preview ">
 			<div class="aimg">
 				<img src="/img/5OPX2[MRAGSAAQ26~K)SZ7Y.jpg">
@@ -7,7 +8,10 @@
 				<i class="iconfont">&#xe601;</i>
 			</div>-->
 				<div class="atextp">
-					<p>此刻，我多想拥抱你，可惜时光里山南水北，可惜你我间人来来往。</p>
+					<p>{{message}}</p>
+				</div>
+				<div class="atextn">
+					<p class="name">--{{name}}</p>
 				</div>
 				<div class="atexti">
 					<div class="at">
@@ -16,16 +20,17 @@
 					</div> 
 					<div class="at at1">
 						<i class="iconfont time">&#xe604;</i>
-						
+						<p>{{vMon}}/{{vDay}}&nbsp&nbsp{{h}}:{{m}}</p>
 					</div>
 					<div class="at at1 ">
 						<i class="iconfont loca">&#xe603;</i>
-						
+						<p>{{city}}</p>
 					</div>
 				</div>
 			</div>
-		</div>
-		<form class="container edit " role="form" action="#" method="POST">
+</div>
+{{/obj}}
+		<form class="container edit hide" role="form" action="#" method="POST">
 			<div class="bicon">
 				<i class="iconfont">&#xe602;</i>
 			</div>
@@ -36,3 +41,7 @@
 				</button>
 			</div>
 		</form>
+
+	<div class="sen">
+		<i class="iconfont loca">&#xe606;</i>
+	</div>

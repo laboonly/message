@@ -1,6 +1,6 @@
 var express = require('express'),
 				message = require('./models/message');
-
+//var path = require('path');
 var app = express();
 
 //设置handlebars视图引擎
@@ -8,8 +8,9 @@ var handlebars = require('express3-handlebars')
 			.create({defaultLayout:'main'});
 	app.engine('handlebars', handlebars.engine);
 	app.set('view engine', 'handlebars');
+	//app.set('views', path.join(__dirname, 'views/layouts'));
 
-app.set('port',process.env.PORT||3001);
+app.set('port',process.env.PORT||3002);
 
 /*app.use(function(req,res,next){
 		res.locals.showTests=app.get('env')!=='production'&&req.query.test==='1';
