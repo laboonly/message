@@ -25,7 +25,12 @@ var locations
 	});
 
 	$('.send').click(function(){
-		$.ajax({
+		var subv=$("#message").val();
+		if (subv == '') {
+			return false;		}
+		else
+		{
+			$.ajax({
 			type: "POST",
 			url:  "/models/message",
 			contentType: "application/Json",
@@ -41,7 +46,11 @@ var locations
 			success: function(data,textAtatus){
 			console.log(data.Message);
 		}});
-
+			location.reload();
+			//$('.preview').removeClass("hide");
+			//$('.edit').addClass("hide");
+			//$('.sen').removeClass("hide");
+		};
 		return false;
 	});
 });
