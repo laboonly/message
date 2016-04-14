@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars')
 	app.set('view engine', 'handlebars');
 	//app.set('views', path.join(__dirname, 'views/layouts'));
 
-app.set('port',process.env.PORT||3002);
+app.set('port',process.env.PORT||3000);
 
 /*app.use(function(req,res,next){
 		res.locals.showTests=app.get('env')!=='production'&&req.query.test==='1';
