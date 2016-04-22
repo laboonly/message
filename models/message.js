@@ -19,7 +19,7 @@ exports.messageJSON = function(req,res)
 	
 
 	Msg.findall(function(err,obj){
-		console.log(obj);
+		
 		res.render('home',{
 			obj: obj
 		});
